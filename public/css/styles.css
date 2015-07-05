@@ -439,6 +439,12 @@ header h1 {
 header h1 span {
   color: orange;
 }
+header .sub {
+  margin: auto 0 auto 20px;
+  color: #777;
+  font-weight: 300;
+  font-size: 0.8em;
+}
 
 .btn {
   -webkit-align-self: flex-end;
@@ -449,7 +455,8 @@ header h1 span {
   display: block;
   margin-left: auto;
   padding: 0.3em 0.4em;
-  border: 1px solid #111;
+  border-left: 1px solid #111;
+  border-right: 1px solid #111;
 }
 .btn:hover {
   background: #e69500;
@@ -467,17 +474,19 @@ header h1 span {
 }
 #main-wrap.upload main h1 {
   margin: 0 0 1em 0;
+  font-size: 2.6em;
 }
 #main-wrap.upload main .title {
   color: #333;
-  font-weight: 700;
+  font-weight: 400;
 }
 #main-wrap.upload main .title span {
   color: orange;
 }
-#main-wrap.upload main .subtitle {
-  font-size: 0.5em;
-  font-weight: 300;
+#main-wrap.upload main .sub {
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #666;
 }
 
 #main-wrap.edit {

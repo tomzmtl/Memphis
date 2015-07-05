@@ -4,6 +4,7 @@
 
     <header>
         <h1><span>M</span>emphis</h1>
+        <div class="sub">CSV edition for Magento</div>
         <button id="confirmSaveBtn" class="btn">Confirm & Download</button>
     </header>
 

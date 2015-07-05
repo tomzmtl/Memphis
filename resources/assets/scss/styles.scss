@@ -50,6 +50,14 @@ header
 
         span { color: orange; }
     }
+
+    .sub
+    {
+        margin: auto 0 auto 20px;
+        color: #777;
+        font-weight: 300;
+        font-size: 0.8em;
+    }
 }
 
 .btn
@@ -62,7 +70,8 @@ header
     display: block;
     margin-left: auto;
     padding: 0.3em 0.4em;
-    border: 1px solid #111;
+    border-left: 1px solid #111;
+    border-right: 1px solid #111;
 
     &:hover
     {
@@ -85,20 +94,22 @@ header
         h1
         {
             margin: 0 0 1em 0;
+            font-size: 2.6em;
         }
 
         .title
         {
             color: #333;
-            font-weight: 700;
+            font-weight: 400;
 
             span { color: orange; }
         }
 
-        .subtitle
+        .sub
         {
-            font-size: 0.5em;
-            font-weight: 300;
+            font-size: 0.7em;
+            font-weight: 400;
+            color: #666;
         }
     }
 }
