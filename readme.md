@@ -5,7 +5,8 @@ Laravel app to import, edit and export Magento localization CSV files.
 ## Technology stack
 
 * Laravel 5.1 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-* Grunt, SCSS
+* Grunt
+* SCSS
 * Vanilla JavaScript (ES5)
 
 ## Composer Packages used

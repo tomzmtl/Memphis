@@ -398,7 +398,7 @@ th {
 }
 
 body {
-  background: #f7f7ff;
+  background: #F7F4EE;
   font-family: Lato;
 }
 
@@ -426,7 +426,7 @@ header {
   background: rgba(40, 40, 40, 0.9);
   display: flex;
   left: 0;
-  padding: 10px 5% 8px 5%;
+  padding: 0 5%;
   position: fixed;
   top: 0;
   width: 100%;
@@ -444,12 +444,15 @@ header h1 span {
   -webkit-align-self: flex-end;
   background: orange;
   border: none;
-  border-radius: 2px;
   color: white;
   cursor: pointer;
   display: block;
   margin-left: auto;
   padding: 0.3em 0.4em;
+  border: 1px solid #111;
+}
+.btn:hover {
+  background: #e69500;
 }
 
 #main-wrap.upload {
@@ -458,9 +461,9 @@ header h1 span {
 }
 #main-wrap.upload main {
   margin: auto;
-  padding: 10vw;
+  padding: 7vw 10vw;
   background: white;
-  border: 1px solid #EEE;
+  border: 1px solid #F0E5D7;
 }
 #main-wrap.upload main h1 {
   margin: 0 0 1em 0;
