@@ -1,0 +1,129 @@
+@import '_normalize';
+
+* { box-sizing: border-box; }
+
+body
+{
+    background: #f7f7ff;
+    font-family: Lato;
+}
+
+ul, ol
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+textarea
+{
+    padding: 0.5em 0.7em;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    background: white;
+    height: 38px;
+    resize: vertical;
+
+    &:focus
+    {
+        outline: none;
+        -webkit-appearance: none;
+        border-bottom-color: orange;
+    }
+}
+
+header
+{
+    background: rgba(40,40,40,0.9);
+    display: flex;
+    left: 0;
+    padding: 10px 5% 8px 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    h1
+    {
+        margin: auto 0;
+        color: white;
+        font-size: 1em;
+
+        span { color: orange; }
+    }
+}
+
+.btn
+{
+    -webkit-align-self: flex-end;
+    background: orange;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    cursor:pointer;
+    display: block;
+    margin-left: auto;
+    padding: 0.3em 0.4em;
+}
+
+#main-wrap.upload
+{
+    height: 100vh;
+    display: flex;
+
+    main
+    {
+        margin: auto;
+        padding: 10vw;
+        background: white;
+        border: 1px solid #EEE;
+
+        h1
+        {
+            margin: 0 0 1em 0;
+        }
+
+        .title
+        {
+            color: #333;
+            font-weight: 700;
+
+            span { color: orange; }
+        }
+
+        .subtitle
+        {
+            font-size: 0.5em;
+            font-weight: 300;
+        }
+    }
+}
+
+
+
+#main-wrap.edit
+{
+    padding: 40px 0;
+
+    main
+    {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    li
+    {
+        display: flex;
+        margin-top: 1em;
+    }
+
+    textarea
+    {
+        flex-grow: 1;
+    }
+
+    .arrow
+    {
+        margin: auto 0.5em;
+        color: #CCC;
+    }
+}
