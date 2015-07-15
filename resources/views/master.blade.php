@@ -17,6 +17,8 @@
 
             function downloadCsv ()
             {
+                var newName = document.getElementById('newFileNameInput').value;
+                document.getElementById('newFileName').value = newName;   
                 document.getElementById('downloadForm').submit();
             }
 
