@@ -21,8 +21,15 @@ class PageController extends Controller
         $id = uniqid();
         $filePath = storage_path() . '/app/csv';
         $fileName =  "$id.csv";
+        $theOriginalFile = Request::file('file');
 
-        Request::file('file')->move( $filePath, $fileName );
+        //get original file name
+        $originalFileName = $theOriginalFile->getClientOriginalName();
+
+        //get original file extension for future reusability of project
+        $originalFileExtension = $theOriginalFile->getClientOriginalExtension();
+
+        $theOriginalFile->move( $filePath, $fileName );
 
         $inputCsv = Reader::createFromPath( $filePath . '/' . $fileName );
         $inputCsv->setDelimiter(',');
@@ -38,7 +45,9 @@ class PageController extends Controller
         return view('edit')
                  ->with( 'action', __FUNCTION__ )
                  ->with( 'lines', $lines )
-                 ->with( 'fileId', $id );
+                 ->with( 'fileId', $id )
+                 ->with( 'originalFileName', $originalFileName )
+                 ->with( 'originalFileExtension', $originalFileExtension );
     }
 
     public function download ()
@@ -54,7 +63,11 @@ class PageController extends Controller
         // set the HTTP headers Writer::output can
         // directly set them for you
         // The file is downloadable
-        $csv->output( Request::input('id') . '.csv' );
+        if(Request::input('newFileName') != ''){
+            $csv->output( Request::input('newFileName') . '.csv' );
+        } else {
+            $csv->output( Request::input('originalFileName') );
+        }
         die;
     }
 

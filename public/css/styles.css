@@ -31,6 +31,7 @@ textarea {
 header {
   background: rgba(40, 40, 40, 0.9);
   display: flex;
+  justify-content: space-between;
   left: 0;
   padding: 0 5%;
   position: fixed;
@@ -47,20 +48,25 @@ header {
     color: #777;
     font-weight: 300;
     font-size: 0.8em; }
-
-.btn {
-  -webkit-align-self: flex-end;
-  background: orange;
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: block;
-  margin-left: auto;
-  padding: 0.3em 0.4em;
-  border-left: 1px solid #111;
-  border-right: 1px solid #111; }
-  .btn:hover {
-    background: #e69500; }
+  header #headerLeft {
+    display: flex; }
+  header #headerRight {
+    display: flex; }
+    header #headerRight input {
+      border: 0px;
+      padding: 0px 3px; }
+    header #headerRight .btn {
+      background: orange;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: block;
+      margin-left: 10px;
+      padding: 0.3em 0.4em;
+      border-left: 1px solid #111;
+      border-right: 1px solid #111; }
+      header #headerRight .btn:hover {
+        background: #e69500; }
 
 #main-wrap.upload {
   height: 100vh;
